@@ -1,0 +1,78 @@
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/mixins";
+
+
+.footer-popup {
+  padding: 95px 152px;
+  flex-direction: column;
+  display: flex;
+  position: relative;
+
+  .close {
+    position: absolute;
+    top: 32px;
+    right: 31px;
+    cursor: pointer;
+  }
+
+  .footer-popup-title {
+    @include head-lora-38;
+    width: 406px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .input {
+    margin-bottom: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 51px;
+  }
+
+  .button {
+    margin-top: 15px;
+    height: 51px;
+  }
+}
+
+.footer-popup-valid {
+  padding: 163px 142px;
+  flex-direction: column;
+  display: flex;
+  position: relative;
+  align-items: center;
+
+  .close {
+    position: absolute;
+    top: 32px;
+    right: 31px;
+    cursor: pointer;
+  }
+
+  .footer-popup-valid-title {
+    @include head-lora-38;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .footer-popup-valid-text {
+    margin-bottom: 40px;
+    color: #1E1A2B;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  .button {
+    font-size: 12px;
+    width: 73px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+

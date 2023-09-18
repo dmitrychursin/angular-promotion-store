@@ -1,0 +1,131 @@
+@import "../../../../assets/styles/variables";
+
+footer.footer {
+  padding-top: 40px;
+  padding-bottom: 54px;
+  background-color: #B9D5FD;
+
+  .container {
+    .footer-content {
+      display: flex;
+      align-items: center;
+
+      .footer-menu {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        margin-left: 40px;
+
+        nav ul {
+          margin: 0;
+          padding: 0;
+          display: flex;
+
+          li {
+            margin-right: 20px;
+            list-style: none;
+
+            a {
+              cursor: pointer;
+              text-decoration: none;
+              color: $dark-blue-text-color;
+
+              &:hover {
+                color: $light-blue-text-color;
+              }
+
+              &.active {
+                color: $light-blue-text-color;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .footer-contacts {
+      display: flex;
+      margin-top: 40px;
+
+      .footer-contact.footer-block {
+        margin-right: 60px;
+
+        &:first-child {
+          width: 253px;
+
+          .footer-contact-info {
+            line-height: 21px;
+          }
+        }
+
+        .footer-contact-head {
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 500;
+          font-size: 16px;
+          color: $light-blue-text-color;
+          margin-bottom: 10px;
+        }
+
+        .footer-contact-info {
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 400;
+          font-size: 16px;
+          color: $dark-blue-text-color;
+
+          a {
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            color: $dark-blue-text-color;
+          }
+        }
+
+        .footer-contact-button {
+          margin-top: 10px;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 500;
+          font-size: 12px;
+          color: #FFFFFF;
+
+          padding: 10px 20px;
+          background-color: $light-blue-text-color;
+          border-radius: 5px;
+          border: 0;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #2d50a7;
+          }
+        }
+
+        .footer-contact-info.social-network {
+          margin-top: 5px;
+
+          a {
+            margin-right: 12px;
+
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+
+
+    .footer-rights {
+      margin-top: 6px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      color: $light-blue-text-color;
+    }
+  }
+}
+
+
+
+
+
+

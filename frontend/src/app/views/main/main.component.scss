@@ -1,0 +1,304 @@
+@import "../../../assets/styles/variables";
+@import "../../../assets/styles/mixins";
+
+
+.stocks {
+  padding-bottom: 60px;
+}
+
+.services {
+  padding: 60px 0;
+
+  .container {
+    .services-title {
+      @include head-lora-38;
+      margin-bottom: 40px;
+    }
+
+    .services-cards {
+      display: flex;
+
+      .services-card {
+        margin-right: 25px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        .services-card-title {
+          @include head-lora-26;
+          margin-top: 15px;
+          margin-bottom: 10px;
+        }
+
+        .services-card-description {
+          height: 90px;
+          color: $dark-blue-text-color;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 130%;
+          margin-bottom: 33px;
+        }
+
+        .services-card-action {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .services-card-price {
+            @include head-lora-26;
+          }
+        }
+      }
+    }
+  }
+}
+
+.info {
+  padding: 60px 0;
+
+  .container {
+    .info-company {
+      display: flex;
+      align-items: center;
+
+      .info-block {
+        margin-left: 68px;
+
+        .info-title {
+          @include head-lora-38;
+          margin-bottom: 20px;
+        }
+
+        .info-text {
+          max-width: 633px;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 400;
+          font-size: 14px;
+          font-style: normal;
+          line-height: 130%;
+          margin-bottom: 40px;
+          color: #1E1A2B;
+
+          span {
+            font-weight: 500;
+          }
+        }
+
+        .info-title-advantages {
+          @include head-lora-26;
+          margin-bottom: 20px;
+        }
+
+        .info-advantages-block {
+          display: flex;
+          align-items: center;
+          margin-bottom: 20px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          .info-advantages {
+            display: flex;
+            align-items: center;
+
+            .info-advantages-number {
+              width: 40px;
+              color: $light-blue-text-color;
+              font-family: 'Lora', sans-serif;
+              font-size: 50px;
+              font-style: normal;
+              font-weight: 500;
+              position: relative;
+              z-index: 1;
+              margin-right: 31px;
+              text-align: center;
+
+              &:before {
+                content: "";
+                position: absolute;
+                bottom: 5px;
+                left: 0;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                border: 0;
+                background-color: #B9D5FD;
+                z-index: -1;
+              }
+            }
+
+            .info-advantages-text {
+              width: 256px;
+              flex-shrink: 0;
+              color: #1E1A2B;
+              font-family: 'Montserrat', sans-serif;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 130%;
+              margin-right: 78px;
+
+              span {
+                color: #1E1A2B;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 130%;
+              }
+            }
+
+            .info-advantages-text.last {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.articles {
+  padding: 60px 0;
+
+  .container {
+    .articles-title {
+      @include head-lora-38;
+      margin-bottom: 40px;
+    }
+
+    .articles-cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+  }
+}
+
+.reviews {
+  margin-top: 60px;
+  margin-bottom: 60px;
+
+  .container {
+    .reviews-title {
+      @include head-lora-38;
+      margin-bottom: 20px;
+    }
+
+    .reviews-carousel {
+      position: relative;
+
+      .review-item {
+        width: 396px;
+        height: 267px;
+        padding: 30px;
+        border: 2px solid $light-blue-text-color;
+        border-radius: 5px;
+        box-sizing: border-box;
+
+        .review-item-head {
+          display: flex;
+          align-items: center;
+
+          .review-item-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-position: center;
+            background-size: cover;
+            margin-right: 26px;
+          }
+
+          .review-item-name {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            color: $light-blue-text-color;
+          }
+        }
+
+        .review-item-text {
+          margin-top: 15px;
+          font-size: 16px;
+          line-height: 140%;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 400;
+          color: #071739;
+        }
+      }
+
+      .reviews-arrows {
+        display: flex;
+
+        a {
+          top: calc(50% - 5px);
+          display: flex;
+          position: absolute;
+          cursor: pointer;
+
+          &.move-backward {
+            left: -25px;
+          }
+
+          &.move-forward {
+            right: -25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.contacts {
+  padding-top: 60px;
+  padding-bottom: 120px;
+
+  .container {
+    .contact {
+      display: flex;
+
+      .contact-block {
+        margin-left: 26px;
+
+        .contact-block-title {
+          @include head-lora-38;
+        }
+
+        .contact-title {
+          color: $light-blue-text-color;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 500;
+          margin-bottom: 10px;
+          margin-top: 20px;
+        }
+
+        .contact-text {
+          color: $dark-blue-text-color;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 130%;
+          width: 501px;
+          text-decoration: none;
+        }
+
+        .contact-social-network {
+          a {
+            margin-right: 20px;
+
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

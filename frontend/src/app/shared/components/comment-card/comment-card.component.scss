@@ -1,0 +1,83 @@
+@import "../../../../assets/styles/variables";
+
+.comments-article {
+  margin-bottom: 40px;
+
+  .comment-article {
+    display: flex;
+    margin-bottom: 15px;
+
+    .comment-article-image {
+      position: relative;
+      margin-right: 26px;
+
+      .avatar2 {
+        position: absolute;
+        top: 4px;
+        left: 8px;
+      }
+    }
+
+    .comment-article-head {
+      .comment-article-head-name {
+        color: $light-blue-text-color;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      .comment-article-head-date {
+        color: #BEBEBE;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .comment-article-text {
+    color: $dark-blue-text-color;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    margin-bottom: 39px;
+  }
+
+  .comment-article-like {
+    display: flex;
+    align-items: center;
+
+    .article-count {
+      color: $dark-blue-text-color;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      margin-right: 3px;
+    }
+
+    svg {
+      margin-right: 15px;
+      cursor: pointer;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &.active path {
+        //stroke: $light-blue-text-color; //border svg
+        fill: $light-blue-text-color;
+      }
+
+      &:disabled {
+        cursor: not-allowed;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,9 @@
+<div class="blog-card">
+  <div class="blog-category">{{article.category}}</div>
+  <div class="blog-card-image"
+       style="background-image: url('../../../../assets/images/blog/{{article.image}}')">
+  </div>
+  <div class="blog-card-title">{{article.title | restrictionText:70}}</div>
+  <div class="blog-card-text">{{article.description | restrictionText}}</div>
+  <a [routerLink]="'/blog/' + article.url"  class="blog-action">Читать дальше</a>
+</div>

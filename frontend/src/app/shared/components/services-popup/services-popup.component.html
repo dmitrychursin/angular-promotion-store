@@ -1,0 +1,60 @@
+<div class="services-popup" [formGroup]="popupServiceForm" *ngIf="popup">
+
+	<a class="close" (click)="closedDialog()">
+		<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<line x1="0.935622" y1="0.649902" x2="12.9564" y2="12.6707" stroke="#BEBEBE" stroke-linecap="round" />
+			<line x1="12.9236" y1="0.629714" x2="0.902769" y2="12.6505" stroke="#BEBEBE" stroke-linecap="round" />
+		</svg>
+	</a>
+
+	<div class="services-popup-title">Заявка на услугу</div>
+
+  <select class="input input-category" formControlName="service">
+    <option selected>{{data.name}}</option>
+    <option *ngFor="let data of servicesCards">{{data.title}}</option>
+  </select>
+
+	<input type="text" class="input" placeholder="Ваше имя" formControlName="name">
+
+	<div class="w-100"
+		*ngIf="popupServiceForm.get('name')?.invalid && (popupServiceForm.get('name')?.touched || popupServiceForm.get('name')?.dirty)">
+		<div class="invalid-feedback" *ngIf="popupServiceForm.get('name')?.errors?.['required']">
+			Пожалуйста, введите ваше имя.
+		</div>
+		<div class=" invalid-feedback" *ngIf="popupServiceForm.get('name')?.errors?.['pattern']">
+			Имя должно состоять только из букв.
+		</div>
+	</div>
+
+	<input type="text" class="input" placeholder="Ваш номер телефона" formControlName="phone">
+
+	<div class="w-100"
+		*ngIf="popupServiceForm.get('phone')?.invalid && (popupServiceForm.get('phone')?.touched || popupServiceForm.get('phone')?.dirty)">
+		<div class="invalid-feedback" *ngIf="popupServiceForm.get('phone')?.errors?.['required']">
+			Пожалуйста, введите ваш корректный номер телефона.
+		</div>
+		<div class="invalid-feedback" *ngIf="popupServiceForm.get('phone')?.errors?.['pattern']">
+			Номер должен содержать только цифры
+		</div>
+	</div>
+
+	<button class="button" [disabled]="popupServiceForm.invalid" (click)="orderPopupValid()">Заказать
+		консультацию</button>
+</div>
+
+<div class="services-popup-valid" *ngIf="popupValid">
+
+	<a class="close" (click)="closedDialog()">
+		<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<line x1="0.935622" y1="0.649902" x2="12.9564" y2="12.6707" stroke="#BEBEBE" stroke-linecap="round" />
+			<line x1="12.9236" y1="0.629714" x2="0.902769" y2="12.6505" stroke="#BEBEBE" stroke-linecap="round" />
+		</svg>
+	</a>
+
+	<div class="services-popup-valid-title">Спасибо за вашу заявку!</div>
+	<div class="services-popup-valid-text">
+		Мы свяжемся с вами при первой же возможности.
+	</div>
+
+	<button class="button" (click)="closedDialog()">Окей</button>
+</div>
